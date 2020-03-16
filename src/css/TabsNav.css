@@ -1,0 +1,53 @@
+/* Tabs Icon #1 */
+.tab-door-icon {
+    width: 2.8125rem;
+    height: 2.8125rem;
+    fill: var(--main-grey);
+}
+
+.tab-devices-icon {
+    width: 9.6875rem;
+    height: 9.6875rem;
+    fill: var(--main-grey);
+}
+
+.tab-tag-icon {
+    width: 2.8125rem;
+    height: 2.8125rem;
+    fill: var(--main-grey);
+}
+
+.tabs {
+    padding-top: 1rem;
+}
+
+.tab-nav-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    list-style: none;
+    color: var(--main-grey);
+    margin: 0 12% ;
+}
+
+/* Tab Nav Hover Effect */
+ul li:hover {
+    cursor:pointer;
+    color: #fff;
+}
+ul li:hover svg path{
+    fill: #fff;
+}
+
+/* The Active Tab */
+.active {
+    border-bottom: 4px solid var(--main-red);
+    color: #fff;
+}
+
+.active svg path {
+    fill: #fff;
+}
