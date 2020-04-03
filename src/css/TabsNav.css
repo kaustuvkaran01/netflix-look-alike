@@ -5,17 +5,43 @@
     fill: var(--main-grey);
 }
 
+/* Media Tab Nav #1 */
+@media (max-width: 900px){
+    .tab-door-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}
+
 .tab-devices-icon {
     width: 9.6875rem;
     height: 9.6875rem;
     fill: var(--main-grey);
 }
 
+/* Media Tab Nav #2 */
+@media (max-width: 900px){
+    .tab-devices-icon {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+
 .tab-tag-icon {
     width: 2.8125rem;
     height: 2.8125rem;
     fill: var(--main-grey);
 }
+
+/* Media Tab Nav #3 */
+@media (max-width: 900px){
+    .tab-tag-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}
+
 
 .tabs {
     padding-top: 1rem;
@@ -50,4 +76,22 @@ ul li:hover svg path{
 
 .active svg path {
     fill: #fff;
+}
+
+
+/* Media for Tab Nav */
+@media(min-width: 900px){
+    .mdScreen {
+        display: none;
+    }
+}
+
+@media(max-width: 900px) {
+    .lgScreen {
+        display:none;
+    }
+    .mdScreen {
+        margin-bottom: 0.4rem;
+        display: block;
+    }
 }

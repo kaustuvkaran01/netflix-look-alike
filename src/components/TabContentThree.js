@@ -4,7 +4,7 @@ import { Button } from "./Button";
 import { Icon } from "react-icons-kit/";
 import { cross } from "react-icons-kit/icomoon/cross";
 import { checkmark } from "react-icons-kit/icomoon/checkmark";
-
+import { generateMedia } from "styled-media-query";
 function TabContentThree() {
   return (
     <TabContainer>
@@ -78,50 +78,67 @@ function TabContentThree() {
   );
 }
 export default TabContentThree;
+const customMedia = generateMedia({
+    lgDesktop: '1350px',
+    mdDesktop:'1000px'
+})
+
 const TabContainer = styled.div`
-    background: var(--main-deep-dark);
-    
-    .tab-content {
-        margin: 0 15%;
-        padding-bottom: 1%;
-    }
-    
-    .tab-top-content {
+  background: var(--main-deep-dark);
 
-        display: grid;
-        grid-template-columns : repeat(12, 1fr);
-        padding: 3rem 0 0;
+  .tab-content {
+    margin: 0 15%;
+    padding-bottom: 1%;
+  }
 
-        span {
-            grid-column: 3 / 9;
-        }
+  .tab-top-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 3rem 0 0;
 
-        .btn {
-            grid-column: 9 / 12;
-        }
-    }
-    //Tab Bottom Content:
-    .tab-bottom-content {
-        margin: 2rem auto;
-    }
-    table {
-        width: 100%;
-        margin-top: 2rem;
-        border-collapse: collapse;
+    ${customMedia.lessThan("lgDesktop")`
+            grid-template-columns: 1fr;
+            row-gap: 1.5rem;
+            text-align: center;
+        `}
+    span {
+      grid-column: 3 / 10;
+      ${customMedia.lessThan("lgDesktop")`
+            grid-column: 1 / -1;
+        `}
     }
 
-    table thead th {
-        text-transform: uppercase;
-        padding: 0.8rem;
+    .btn {
+      grid-column: 10 / 12;
+      ${customMedia.lessThan("mdDesktop")`
+          grid-column: 1 / -1;
+          margin-left: 30%;
+          margin-right: 30%;
+        `}
     }
+  }
+  //Tab Bottom Content:
+  .tab-bottom-content {
+    margin: 2rem auto;
+  }
+  table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+  }
 
-    table tbody tr td{
-        color: var(--main-grey);
-        padding: 0.8rem 1.2rem;
-        text-align: center;
-    }
+  table thead th {
+    text-transform: uppercase;
+    padding: 0.8rem;
+  }
 
-    table tbody tr: nth-child(even) {
-        background: var(--main-dark);
-    }
+  table tbody tr td {
+    color: var(--main-grey);
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+  }
+
+  tabletbodytr: nth-child(even) {
+    background: var(--main-dark);
+  }
 `;

@@ -11,7 +11,7 @@ import TabContentThree from "./TabContentThree";
 class TabsComponent extends Component {
 
   state = {
-    tabIndex: 2
+    tabIndex: 1
   }
 
   render() {
@@ -24,27 +24,32 @@ class TabsComponent extends Component {
               <TabList className="tab-nav-container">
                   <Tab className={ `${this.state.tabIndex === 0 ? 'active': null} `}> 
                     <TabDoor /> 
-                    <p style={{marginBottom: '1.875rem'}}>
+                    <p className="lgScreen" style={{marginBottom: '1.875rem'}}>
                       <strong>
                         No Commitments. <br /> Cancel anytime.
                       </strong>
                     </p>
+                    <br />
+                    <span className="mdScreen" style={{ marginTop:"0.4rem" }}>Cancel</span>
                   </Tab>
                   <Tab className={ `${this.state.tabIndex === 1 ? 'active': null} `}>
                      <TabsDevices />
-                     <p style={{marginTop: '-5.3125rem'}}>
+                     <p className="lgScreen" style={{marginTop: '-5.3125rem'}}>
                        <strong>
                          Watch anywhere
                        </strong>
                      </p>
+                     <span className="mdScreen" style={{ marginTop:"-5.3125rem" }}>Devices</span>
                   </Tab>
                   <Tab className={ `${this.state.tabIndex === 2 ? 'active': null} `}>
                      <TabsTag />
-                     <p>
+                     <p className="lgScreen">
                        <strong>
                          Pick your price
                        </strong>
                      </p>
+                     <br />
+                     <span className="mdScreen" style={{}}>Price</span>
                   </Tab>
               </TabList>
               <TabPanel>

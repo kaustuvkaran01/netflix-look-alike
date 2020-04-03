@@ -2,12 +2,13 @@ import React from 'react';
 import img1 from "../images/tab-1-pic.png";
 import styled from "styled-components";
 import { Button } from "./Button";
+import { generateMedia } from "styled-media-query";
 export default function TabContentOne() {
   return (
     <TabContentContainer>
       <div className="container">
         <div className="tab-content">
-            <span style={{ marginBottom: '2rem' }}>
+            <span className="title" style={{ marginBottom: '2rem' }}>
               If you decide Netflix isn't for you - no problem. No commitment.
               Cancel online anytime.
             </span>
@@ -20,8 +21,24 @@ export default function TabContentOne() {
   );
 }
 
+// Media Query
+const customMedia = generateMedia({
+  smDesktop: '1440px',
+  tablet: '960px',
+
+})
+
+//Main Content Container
 const TabContentContainer = styled.div`
  background: var(--main-deep-dark);
+
+  .title {
+     margin-top: 2rem;
+     ${customMedia.lessThan('smDesktop')`
+      font-size: 1.5rem;
+      line-height: 1;
+     `}
+  }
 
   img {
     width: 31.875rem;
@@ -37,5 +54,11 @@ const TabContentContainer = styled.div`
     font-size: 2rem;
     align-items: center;
     padding: 2.5rem;
+    ${customMedia.lessThan('tablet')`
+        grid-template-columns: 100%;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+     `}
   }
 `;
