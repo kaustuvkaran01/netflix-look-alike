@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { Link, NavLink } from "react-router-dom";
 import { Button } from "./Button";
 import { Icon } from "react-icons-kit/";
 import { cross } from "react-icons-kit/icomoon/cross";
@@ -14,7 +15,7 @@ function TabContentThree() {
           <span style={{ fontSize: "1.5rem" }}>
             Choose one plan and watch everything on Netflix.
           </span>
-          <Button className="btn"> Try it now</Button>
+          <Link to="/choose=plan" className="btn"><Button> Try it now</Button></Link>
         </div>
         {/* Tab Bottom Content */}
         <div className="tab-bottom-content">

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, NavLink } from "react-router-dom";
 import { Button } from "./Button";
 import styled from "styled-components";
 import img1 from "../images/tab-macbook.png";
@@ -15,7 +16,7 @@ function TabContentTwo() {
             Watch Tv shows and Movies anytime, anywhere -<br /> personalized for
             you
           </span>
-          <Button className="btn">Try it Now</Button>
+          <NavLink to="/choose-plan"  className="btn"><Button> Try it now</Button></NavLink>
         </div>
         {/* Tab Bottom Content */}
         <div className="tab-bottom-content">

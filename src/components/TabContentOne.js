@@ -1,5 +1,6 @@
 import React from 'react';
 import img1 from "../images/tab-1-pic.png";
+import {Link, NavLink} from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "./Button";
 import { generateMedia } from "styled-media-query";
@@ -13,7 +14,7 @@ export default function TabContentOne() {
               Cancel online anytime.
             </span>
             <br />
-            <Button style={{ marginTop:'2rem', width:'10rem' }}>Try it now.</Button>
+            <Link to="/choose-plan" className="btn"><Button style={{ marginTop:'2rem', width:'10rem' }}>Try it now.</Button></Link>
             <img src={img1} />
           </div>
       </div>

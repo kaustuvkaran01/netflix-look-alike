@@ -12,26 +12,29 @@ class Header extends Component {
   render() {
     return (
       <HeaderComponent className="header-container">
-          <div className="header-top">
-            <Logo src={logo} />
-            <NavLink className="signIn-btn" to="/login">Sign In</NavLink>
-          </div>
-          {/* Header Container */}
-          <div className="header-content">
-              <MainTitle>
-                See, what's next!
-              </MainTitle>
-              <MainSub>
-                  WATCH ANYWHERE. CANCEL ANYTIME
-              </MainSub>
-              <Button className="main-offer-btn" primary style={{position:"relative"}}>
-                TRY IT NOW
-                <Icon className="Icon" icon={ic_keyboard_arrow_right} size={37} />
-                
-              </Button>
-          </div>
+        <div className="header-top">
+          <Logo src={logo} />
+          <NavLink className="signIn-btn" to="/login">
+            Sign In
+          </NavLink>
+        </div>
+        {/* Header Container */}
+        <div className="header-content">
+          <MainTitle>See, what's next!</MainTitle>
+          <MainSub>WATCH ANYWHERE. CANCEL ANYTIME</MainSub>
+          <Link to="/choose-plan">
+            <Button
+              className="main-offer-btn"
+              primary
+              style={{ position: "relative" }}
+            >
+              TRY IT NOW
+              <Icon className="Icon" icon={ic_keyboard_arrow_right} size={37} />
+            </Button>
+          </Link>
+        </div>
       </HeaderComponent>
-    )
+    );
   }
 }
 
