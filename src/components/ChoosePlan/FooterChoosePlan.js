@@ -4,7 +4,7 @@ import styled from "styled-components";
 // import { Icon } from "react-icons-kit";
 // import { iosWorld } from "react-icons-kit/ionicons/iosWorld";
 // import { arrowSortedDown } from "react-icons-kit/typicons/arrowSortedDown";
-import { generateMedia } from "styled-media-query";
+// import { generateMedia } from "styled-media-query";
 
 
 const FooterChoosePlan = () => {
