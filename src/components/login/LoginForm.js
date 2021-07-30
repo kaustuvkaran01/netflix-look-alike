@@ -11,7 +11,7 @@ const initState = {
   emailError:'',
   passwordError:''
 }
-const regexp = RegExp(/^([a-zA-Z0-9_-\.]+)@([a-zA-Z0-9_-\.]+)\.([a-zA-Z]{2,5})$/);
+const regexp = RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/);
 
 class LoginForm extends Component {
  
