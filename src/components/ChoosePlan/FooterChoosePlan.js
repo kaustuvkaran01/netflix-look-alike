@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Icon } from "react-icons-kit";
-import { iosWorld } from "react-icons-kit/ionicons/iosWorld";
-import { arrowSortedDown } from "react-icons-kit/typicons/arrowSortedDown";
+// import { Icon } from "react-icons-kit";
+// import { iosWorld } from "react-icons-kit/ionicons/iosWorld";
+// import { arrowSortedDown } from "react-icons-kit/typicons/arrowSortedDown";
 import { generateMedia } from "styled-media-query";
 
 
@@ -44,9 +44,9 @@ const FooterChoosePlan = () => {
 
 export default FooterChoosePlan;
 //Media
-const customMedia = generateMedia({
-    tablet: '740px'
-  })
+// const customMedia = generateMedia({
+//     tablet: '740px'
+//   })
 
   const FooterContainer = styled.footer`
       display: grid;

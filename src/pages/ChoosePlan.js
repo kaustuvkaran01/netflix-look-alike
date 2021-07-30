@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from "styled-components";
-import { generateMedia } from "styled-media-query";
+// import { generateMedia } from "styled-media-query";
 import logo from "../svg/logo.svg";
 import { Link, NavLink } from "react-router-dom";
 import CheckmarkLogo from "../images/Checkmark.png";

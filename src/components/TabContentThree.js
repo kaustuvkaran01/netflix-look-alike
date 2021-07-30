@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import { Icon } from "react-icons-kit/";
 import { cross } from "react-icons-kit/icomoon/cross";

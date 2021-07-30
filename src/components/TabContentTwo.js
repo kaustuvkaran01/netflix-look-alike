@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link, NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from "react-router-dom";
 import { Button } from "./Button";
 import styled from "styled-components";
 import img1 from "../images/tab-macbook.png";
@@ -21,7 +21,7 @@ function TabContentTwo() {
         {/* Tab Bottom Content */}
         <div className="tab-bottom-content">
           <div>
-            <img src={img1} />
+            <img alt="some weird thing" src={img1} />
             <h3>Watch on your TV</h3>
             <p>
               Smart TVs, Playstation, Xbox, Chromecast, AppleTV, Blu-ray players
@@ -29,12 +29,12 @@ function TabContentTwo() {
             </p>
           </div>
           <div>
-            <img src={img2} />
+            <img alt="some weird thing" src={img2} />
             <h3>Watch instantly or download for later</h3>
             <p>Available on phone or tablet, wherever you go.</p>
           </div>
           <div>
-            <img src={img3} />
+            <img alt="some weird thing" src={img3} />
             <h3>Use any computer</h3>
             <p>Watch right on netflix.com</p>
           </div>

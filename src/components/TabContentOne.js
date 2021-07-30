@@ -1,6 +1,6 @@
 import React from 'react';
 import img1 from "../images/tab-1-pic.png";
-import {Link, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "./Button";
 import { generateMedia } from "styled-media-query";
@@ -15,7 +15,7 @@ export default function TabContentOne() {
             </span>
             <br />
             <Link to="/choose-plan" className="btn"><Button style={{ marginTop:'2rem', width:'10rem' }}>Try it now.</Button></Link>
-            <img src={img1} />
+            <img src={img1} alt="I don't know what this is"/>
           </div>
       </div>
     </TabContentContainer>

@@ -11,7 +11,7 @@ const initState = {
   emailError:'',
   passwordError:''
 }
-const regexp = RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/);
+const regexp = RegExp(/^([a-zA-Z0-9_-\.]+)@([a-zA-Z0-9_-\.]+)\.([a-zA-Z]{2,5})$/);
 
 class LoginForm extends Component {
  
@@ -39,6 +39,7 @@ class LoginForm extends Component {
   //Validate function
   validate = () => {
     let inputError = false;
+    console.log(inputError);
     const errors = {
       emailError:'',
       passwordError:''
@@ -65,6 +66,7 @@ class LoginForm extends Component {
   onSubmitChange = e => {
     e.preventDefault();
     const err = this.validate();
+    console.log(err);
     if(!e){
       this.setState(initState);
     }
